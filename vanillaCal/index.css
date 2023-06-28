@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 40px;
+}
+#result{
+    width: 310px;
+    height: 100px;
+    background-color: blue;  
+    border: 1px solid black;
+    color: white;
+    font-size: 30px;
+
+}
+#finalResult{
+
+    width: 310px;
+    height: 100px;
+    background-color: blue;
+    border: 1px solid black;
+    color: white;
+    font-size: 30px;
+}
