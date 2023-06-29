@@ -1,11 +1,16 @@
 import React from 'react'
 import "./Home.css";
 import {useState} from 'react';
+import { useEffect } from 'react';
 
 export const Home = () => {
     const [sum,setSum] = useState('')
     const [result,setResult] = useState('')
     
+    useEffect(()=>{
+        window.addEventListener("keydown",handleKeyDown)
+    })
+
 
     const handleNumClick = (event) => {
         console.log(event)
