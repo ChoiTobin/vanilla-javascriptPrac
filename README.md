@@ -1,4 +1,4 @@
-#왕초보 vanilla-javascriptPrac 시간이 없어점진적 개선중
+#왕초보 vanilla-javascriptPrac
 <h4>
   <p>React version &javascript version</p>
   <p>06-28   마우스 클릭 </p>
