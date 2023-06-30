@@ -1,40 +1,50 @@
 let buttons = document.querySelectorAll("button");
 
-var sum =""
+var Num_String_sum =""
+
+
+
+
+
+
 buttons.forEach(function(button){
     button.addEventListener("click",function(){
 
     let buttonValue = this.value;
 
     if(buttonValue == "C"){
-        sum = ''
-        finalSum()
+        Num_String_sum = ''
+        resultInput()
     }else if(buttonValue !== "="){
-        sum = sum+buttonValue
+        Num_String_sum = Num_String_sum+buttonValue
     }
-       handleSum(sum,buttonValue)
-        
+       inputSumF(Num_String_sum,buttonValue)
     })
 })
 
-function handleSum(value,buttonValue) {
-    let resultElement =document.getElementById("result")
-    resultElement.textContent=value
-    let result = value
-    let finalResult = eval(result)
-
-    if(buttonValue == "="){
-        finalSum(finalResult,buttonValue)
-    }
-
-
-}
-function finalSum(value){
+function inputSumF(Num_String_sum,buttonValue) {
     
-    let resultElement = document.getElementById("finalResult")
-    resultElement.textContent =value
+    let inputElement =document.getElementById("result")
+    
+    inputElement.textContent=Num_String_sum
+
+    let finalValue = eval(Num_String_sum)
+    if(buttonValue == "="){
+        resultInput(finalValue)
+    }
+}
+function resultInput(finalValue){
+    let inputElement = document.getElementById("finalResult")
+    inputElement.textContent =finalValue
 
 }
 
-
-// = 버튼을 누른다. => finalResult에 값을 finalSum에 준다.
+// 키보드 이벤트
+window.addEventListener('keydown',function(e){console.log(e)})
+// buttons.forEach(function(button){
+//     button.addEventListener("keydown",function(event){
+//         console.log(event)
+//         let buttonValue = this.value;
+//         console.log(buttonValue)
+//     })
+// })
