@@ -1,11 +1,38 @@
-const 정답 = "APPLE";
+
+
+
 
 let attempts = 0;
 let index = 0;
 let timer;
 let keyColor =""
 let keyBoardColor =""
-function appStart() {
+const appStart= async ()=> {
+         const 응답 = await fetch('/answer')
+         const 정답 = await 응답.json();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const displayGameover = () => {
     const div = document.createElement("div");
     div.innerText = "게임이 종료됐습니다.";
@@ -49,7 +76,10 @@ function appStart() {
 
       const handleEnterKey = () => {
         let 맞은_갯수 = 0;
-    
+        
+
+        
+
         for (let i = 0; i < 5; i++) {
           const block = document.querySelector(
             `.board-column[data-index='${attempts}${i}']`
